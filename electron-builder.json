@@ -1,0 +1,61 @@
+{
+  "appId": "com.floodaudit.desktop",
+  "productName": "山洪审核桌面应用",
+  "directories": {
+    "output": "dist-electron"
+  },
+  "files": [
+    "dist/**/*",
+    "main.js",
+    "preload.js",
+    "src/database/**/*",
+    "!node_modules/**/*",
+    "!*.md",
+    "!*.yml"
+  ],
+  "extraResources": [
+    {
+      "from": "build/",
+      "to": "build/"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64", "ia32"]
+      }
+    ],
+    "icon": "build/icon.ico",
+    "publisherName": "AI公司",
+    "verifyUpdateCodeSignature": false
+  },
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "icon": "build/icon.icns",
+    "category": "public.app-category.productivity",
+    "identity": null,
+    "gatekeeperAssess": false
+  },
+  "linux": {
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.png",
+    "category": "Utility"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "perMachine": true
+  },
+  "publish": null
+}
