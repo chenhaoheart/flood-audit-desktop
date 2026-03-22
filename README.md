@@ -1,4 +1,5 @@
-# 山洪审核桌面应用
+# flood-audit-desktop
+山洪灾害审核汇集系统
 
 Electron + React 桌面应用基础框架
 
